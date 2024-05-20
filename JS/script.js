@@ -11,3 +11,21 @@ buttonEl.addEventListener('click',function (){
         articleEl.append(i+1)
     }
 })
+function getRandom (max, min){
+    return Math.floor(Math.random() * ((max + 1)- min)) + min;
+}
+const bomb = []
+let i = 0;
+while(i < 16){
+    let numberRand = getRandom(100, 1)
+    if(numberRand == bomb.indexOf(numberRand)){
+        i = i
+    }
+    else{
+        bomb.push(numberRand);
+        i++;
+    }
+}
+
+
+console.log(bomb)
