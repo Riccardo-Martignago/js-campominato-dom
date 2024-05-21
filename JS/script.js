@@ -26,7 +26,7 @@ buttonEl.addEventListener('click',function (){
     }
     while(i < 16){
         let numberRand = getRandom(100, 1)
-        if(numberRand != bomb.findIndex(numberRand)){
+        if(!bomb.includes(numberRand)){
             bomb.push(numberRand);
             i++;
         }
