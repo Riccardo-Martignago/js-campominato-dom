@@ -11,15 +11,14 @@ buttonEl.addEventListener('click',function (){
     for(let i = 0; i < 100; i++){
         const articleEl = document.createElement('article');
         articleEl.addEventListener('click', function(){
-            for(let i = 0; i < bomb.length; i++){
-                if(i !== bomb.indexOf(i)){
+                if(!bomb.includes(i + 1)){
                     articleEl.classList.add('active')
+                    console.log (bomb.includes(i))
                 }
                 else{
                     articleEl.classList.add('bomb')
+                    console.log (bomb.includes(i))
                 }
-            }
-            console.log(i+1)
         })
         gridEl.appendChild(articleEl);
         articleEl.append(i+1)
